@@ -38,28 +38,37 @@ digit_recognition_project/
 │── requirements.txt          # Dependencies
 │── .gitignore
 └── README.md
+```
 
 🚀 How to Run
 1️⃣ Clone the repository
-
+```bash
 git clone https://github.com/AkashPegada/digit_recognition_project.git
 cd digit_recognition_project
+```
 
 2️⃣ Create & activate a virtual environment
 
 Windows (PowerShell)
+```bash
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
+```
 
 macOS / Linux
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 4️⃣ Run the Streamlit app
+```bash
 streamlit run streamlit_app.py
+```
 
 Then open http://localhost:8501
  in your browser.
@@ -94,7 +103,7 @@ Observe the heatmap overlay that visualizes model attention 🔥.
 🧪 Optional — Retrain the Model
 
 If digit_recognizer.h5 is missing or you want to retrain, run the following script:
-
+```python
 # train_mnist_model.py
 import tensorflow as tf
 from tensorflow.keras import layers, models, datasets
@@ -115,6 +124,7 @@ model = models.Sequential([
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.fit(x_train, y_train, epochs=3, validation_split=0.1)
 model.save("digit_recognizer.h5")
+```
 
 📦 Requirements
 
@@ -140,7 +150,7 @@ __pycache__/
 📸 Screenshots
 | Upload Digit                                | Grad-CAM Heatmap                               |
 | ------------------------------------------- | ---------------------------------------------- |
-| ![upload\_example](assets/digit_sample.png) | ![gradcam\_example](assets/gradcam_sample.png) |
+| ![digit_sample.png](digit_recognition_project/digit_sample.png) | ![gradcam\_example](digit_recognition_project/gradcam_sample.png) |
 
 
 
