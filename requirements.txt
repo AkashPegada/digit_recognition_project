@@ -1,0 +1,8 @@
+    streamlit>=1.37
+tensorflow>=2.20,<2.21
+opencv-python-headless
+numpy
+pillow
+matplotlib
+streamlit-drawable-canvas
+h5py
